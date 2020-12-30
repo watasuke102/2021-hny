@@ -2,8 +2,6 @@
 // Email  : <watasuke102@gmail.com>
 // Twitter: @Watasuke102
 // This software is released under the MIT SUSHI-WARE License.
-document.addEventListener('touchmove', function(event) {event.preventDefault();}, {passive: false});
-
 const scene    = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer({alpha: true});
 const camera   = new THREE.PerspectiveCamera(
