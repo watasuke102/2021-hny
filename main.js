@@ -16,24 +16,33 @@ camera.position.set(0, 0, 60)
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-let text = new THREE.Mesh();
+let year = new THREE.Mesh();
+let hny  = new THREE.Mesh();
 const loader = new THREE.FontLoader();
 loader.load(
   'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/fonts/helvetiker_regular.typeface.json',
   function (font) {
-    const geometry = new THREE.TextGeometry(
-      '2021\nHappy new year', {
+    const material   = new THREE.MeshBasicMaterial({ color: 0x93f4ff });
+    const y_geometry = new THREE.TextGeometry(
+      '2021', {
       font: font,
       size: 6.0,
       height: 1
-    }
-    );
-    geometry.center();
-    text = new THREE.Mesh(
-      geometry,
-      new THREE.MeshBasicMaterial({ color: 0xff00ff })
-    );
-    scene.add(text);
+    });
+    y_geometry.center();
+    year = new THREE.Mesh(y_geometry, material);
+    year.position.y += 4;
+    scene.add(year);
+    const h_geometry = new THREE.TextGeometry(
+      'Happy new year!', {
+      font: font,
+      size: 6.0,
+      height: 1
+    });
+    h_geometry.center();
+    hny  = new THREE.Mesh(h_geometry, material);
+    hny.position.y  -= 4;
+    scene.add(hny);
   }
 );
 
@@ -42,7 +51,8 @@ const tick = function() {
   renderer.render(scene, camera);
   controller.update();
   // Animation
-  text.rotation.y -= 0.005;
+  year.rotation.y -= 0.002;
+  hny.rotation.y  -= 0.002;
 }
 
 tick();
