@@ -41,7 +41,8 @@ const tick = function() {
   requestAnimationFrame(tick);
   renderer.render(scene, camera);
   controller.update();
-  requestAnimationFrame(tick);
+  // Animation
+  text.rotation.y -= 0.005;
 }
 
 tick();
