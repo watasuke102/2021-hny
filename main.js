@@ -3,7 +3,7 @@
 // Twitter: @Watasuke102
 // This software is released under the MIT SUSHI-WARE License.
 const scene    = new THREE.Scene();
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({alpha: true});
 const camera   = new THREE.PerspectiveCamera(
   60,
   window.innerWidth / window.innerHeight,
