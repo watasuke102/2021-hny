@@ -12,11 +12,11 @@ const width   = window.innerWidth;
 const height  = window.innerHeight;
 canvas.setAttribute('width',  width);
 canvas.setAttribute('height', height);
-
-const circle = [];
+context.lineWidth = 3;
 
 // 7秒ごとに1つずつパーティクルを追加する（最大10個）
 // 開始直後に1つ追加される
+const circle = [];
 for (let i = 0; i < 10; i++){
     setTimeout(function () {
         circle.push({ x: rand(width), y: rand(height), size: 0, color:{r:0, g:0, b:0, a:1} });
