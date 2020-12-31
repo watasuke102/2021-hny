@@ -15,11 +15,17 @@ canvas.setAttribute('width',  width);
 canvas.setAttribute('height', height);
 
 const circle = [];
-let count = 0;
 
-circle.push({ x: rand(width), y: rand(height), size: 0, alpha: 1 });
+// 7秒ごとに1つずつパーティクルを追加する（最大10個）
+// 開始直後に1つ追加される
+for (let i = 0; i < 10; i++){
+    setTimeout(function () {
+        circle.push({ x: rand(width), y: rand(height), size: 0, alpha: 1 });
+    }, 7000*i);
+}
 
 loop();
+
 
 function loop() {
     requestAnimationFrame(loop);
