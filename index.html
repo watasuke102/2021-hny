@@ -21,10 +21,19 @@ This software is released under the MIT SUSHI-WARE License.
       background-color: #ffffff00;
       color: white;
     }
-    div p{
+    div a{
       position: absolute;
       left: 15px;
       top:   5px;
+    }
+    div p{
+      position: absolute;
+      font-size: 18px;
+      left: 15px;
+      top:  30px;
+    }
+    @media screen and (min-width: 550px){
+      div p{display: none;}
     }
   </style>
   <title>HAPPY NEW YEAR</title>
@@ -34,6 +43,7 @@ This software is released under the MIT SUSHI-WARE License.
   <script src="https://cdn.jsdelivr.net/npm/three@0.101.1/examples/js/controls/OrbitControls.js"></script>
   <script src="main.js"></script>
   <div>
+    <a href="https://github.com/watasuke102/2021-hny">View source code</a>
     <p>スマホの場合は横にしてリロードしたほうがいいかも</p>
     <canvas id="particle"></canvas>
     <script src="particle.js"></script>
