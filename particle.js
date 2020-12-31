@@ -6,8 +6,7 @@
 function rand(x) {
     return Math.floor(Math.random() * x);
 }
-const canvas = document.getElementById('particle');
-console.log(canvas);
+const canvas  = document.getElementById('particle');
 const context = canvas.getContext('2d');
 const width   = window.innerWidth;
 const height  = window.innerHeight;
