@@ -21,7 +21,11 @@ This software is released under the MIT SUSHI-WARE License.
       background-color: #ffffff00;
       color: white;
     }
-    div p{margin:15px;}
+    div p{
+      position: absolute;
+      left: 15px;
+      top:   5px;
+    }
   </style>
   <title>HAPPY NEW YEAR</title>
 </head>
@@ -31,6 +35,8 @@ This software is released under the MIT SUSHI-WARE License.
   <script src="main.js"></script>
   <div>
     <p>スマホの場合は横にしてリロードしたほうがいいかも</p>
+    <canvas id="particle"></canvas>
+    <script src="particle.js"></script>
   </div>
 </body>
 
